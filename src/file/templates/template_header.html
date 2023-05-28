@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./satellite-infrastructure/src/main/resources/templates/tailwind.css" rel="stylesheet">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta charset='UTF-8'/>
+    <meta content='Content-type: text/html; charset=UTF-8' name='http-equiv'/>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
+          name='viewport'/>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    gray900: "#000000",
+                    gray800: "#141414",
+                    gray700: "#1B1B1B",
+                    gray600: "#373737",
+                    gray500: "#545454",
+                    gray400: "#818181",
+                    gray300: "#A5A4A4",
+                    gray200: "#C5C5C5",
+                    gray100: "#F6F6F6",
+                    gray50: "#FFFFFF",
+                    blue: "#006EFF",
+                    blue200: "#388EFF",
+                    blue100: "#6FADFF",
+                    green: "#04DF00",
+                    green200: "#5AFF00",
+                    check: "#04DF00",
+                    green100: "#DCFDCA",
+                    red: "#E84045",
+                    red200: "#FF7070",
+                    red100: "#FDE4D9",
+                    error: "#E84045",
+                    focus: "#006EFF"
+                },
+            },
+            fontSize: {
+                title1: [
+                    "30px",
+                    { fontWeight: "600", },
+                ],
+                title2: [
+                    "27px",
+                    { fontWeight: "500", },
+                ],
+                title3: [
+                    "24px",
+                    { fontWeight: "300", },
+                ],
+                title4: [
+                    "24px",
+                    { fontWeight: "100", },
+                ],
+                body1: [
+                    "22px",
+                    { fontWeight: "500", },
+                ],
+                body2: [
+                    "22px",
+                    { fontWeight: "400", },
+                ],
+                body3: [
+                    "20px",
+                    { fontWeight: "500", },
+                ],
+                body4: [
+                    "20px",
+                    { fontWeight: "400", },
+                ],
+                body5: [
+                    "17px",
+                    { fontWeight: "500", },
+                ],
+                body6: [
+                    "17px",
+                    { fontWeight: "400", },
+                ],
+                body7: [
+                    "14px",
+                    { fontWeight: "400", },
+                ],
+                body8: [
+                    "14px",
+                    { fontWeight: "600", },
+                ],
+            },
+            plugins: [],
+        };
+    </script>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        page {
+            padding: 80px;
+            background-color: #f6f6f6;
+            height: 1122px;
+        }
+
+        .bg-gray50 {
+            background-color: #FFFFFF;
+        }
+
+        .bg-gray100 {
+            background-color: #F6F6F6;
+        }
+
+        .bg-gray300 {
+            background-color: #A5A4A4
+        }
+
+        .text-gray400 {
+            color: #818181;
+        }
+
+        .text-title1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .text-title2 {
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .text-title3 {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .text-title4 {
+            font-size: 24px;
+            font-weight: 100;
+        }
+
+        .text-body1 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .text-body2 {
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .text-body3 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .text-body4 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .text-body5 {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .text-body6 {
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .text-body7 {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .text-body8 {
+            font-size: 14px;
+            font-weight: 200;
+        }
+
+    </style>
+</head>
