@@ -1,7 +1,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const { MONGO_DB_URI } = process.env;
+const properties = require('../config/properties')
 
-const client = new MongoClient(MONGO_DB_URI, {
+exports.client = new MongoClient(properties.dbUri, {
 	serverApi: {
 		version: ServerApiVersion.v1,
 		strict: true,
@@ -10,15 +10,7 @@ const client = new MongoClient(MONGO_DB_URI, {
 });
 
 exports.dbConnect = async () => {
-	await client.connect();
-	await client.db("repo");
+	await this.client.connect();
+	await this.client.db("repo");
 	console.log("Successfully connected to MongoDB");
-
-}
-
-exports.getDocumentsByGrade = async (grade) => {
-	return await client.db('repo')
-		.collection('documents')
-		.find({ 'writer.grade' : Number(grade) })
-		.toArray()
 }
