@@ -5,7 +5,7 @@ const path = require('path');
 exports.processTemplateByDocuments = async (documents) => {
 
 	const templateHeader = fs.readFileSync(path.join(__dirname, '/templates/template_header.html'))
-	console.log(documents)
+
 	const bodyHtml = documents.map(
 		(document) => {
 			const resumeHtml = fs.readFileSync(
