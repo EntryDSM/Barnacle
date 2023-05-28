@@ -3,7 +3,7 @@
         <div class="flex justify-between">
             <div>
                 <span class="text-title1">{{writer.name}}</span>
-                &nbsp;
+                <br>
                 <span class="text-title4">{{writer.majorName}}</span>
             </div>
             <div class="flex">
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div>
+        <div style="margin-top: 17px">
             <span class="text-body3">{{introduce.heading}}</span>
             <p class="text-body8 text-gray400 mt-2">{{introduce.introduce}}</p>
         </div>
@@ -45,7 +45,9 @@
                                 <span>{{date}}</span>
                             </div>
                         </div>
-                        <div>{{description}}</div>
+                        {{#description}}
+                            <div>{{.}}</div>
+                        {{/description}}
                     </div>
                 </div>
                 {{/awardList}}
