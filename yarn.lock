@@ -153,6 +153,13 @@ basic-ftp@^5.0.2:
   resolved "https://registry.yarnpkg.com/basic-ftp/-/basic-ftp-5.0.3.tgz#b14c0fe8111ce001ec913686434fe0c2fb461228"
   integrity sha512-QHX8HLlncOLpy54mh+k/sWIFd0ThmRqwe9ZjELybGZK+tZ8rUb9VO0saKJUROTbE+KhzDUT7xziGpGrW8Kmd+g==
 
+binary-uuid@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/binary-uuid/-/binary-uuid-2.0.3.tgz#67f0a2ea05b5cd06efc7de018bd3d6c84e62d6d9"
+  integrity sha512-WaQMBLVgPUuHUHAoTRuafVwF3mskYKAwuE1+9D+tI1RK/eho+wvq8aj4UZhpboelGkifURzRdlIweRkPrgnxWA==
+  dependencies:
+    uuid "^7.0.3"
+
 bl@^4.0.3:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/bl/-/bl-4.1.0.tgz#451535264182bec2fbbc83a62ab98cf11d9f7b3a"
@@ -1394,6 +1401,11 @@ uuid@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.0.0.tgz#bc6ccf91b5ff0ac07bbcdbf1c7c4e150db4dbb6c"
   integrity sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==
+
+uuid@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
 vary@~1.1.2:
   version "1.1.2"
