@@ -1,13 +1,12 @@
 FROM node:14-alpine
-
-WORKDIR /home/node/app
+WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN yarn
 
-ENV NODE_ENV production
+RUN yarn build
 
-EXPOSE 3000
+EXPOSE 3030
 
-CMD [ "npm", "start" ]
+CMD yarn start
