@@ -4,12 +4,12 @@ const path = require('path');
 
 exports.processTemplateByDocuments = async (documents) => {
 
-	const templateHeader = fs.readFileSync(path.join(__dirname, '/templates/template_header.html'))
+	const templateHeader = fs.readFileSync(path.join(__dirname, '/templates/template_header'))
 
 	const bodyHtml = documents.map(
 		(document) => {
 			const resumeHtml = fs.readFileSync(
-				path.join(__dirname, '/templates/resume_template.html'), 'utf-8'
+				path.join(__dirname, '/templates/resume_template'), 'utf-8'
 			)
 			documentFormat(document)
 			return mustache.render(resumeHtml, document);
