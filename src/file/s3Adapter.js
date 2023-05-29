@@ -8,14 +8,18 @@ AWS.config.update({
 });
 var s3 = new AWS.S3();
 
-exports.savePdfFile = (fileName, fileData) => {
+exports.savePdfFile = async (fileName, fileData) => {
     const key = properties.pdfFolder + fileName
-    s3.putObject({
+    await s3.upload( {
         Bucket: properties.bucket,
         Key: key,
         Body: fileData
-    }, (err, data) => {
-       err ? reject(err): resolve(data);
+    }).promise()
+    .then((data) => {
+        console.log('Upload Success! : ', data.Location);
+    })
+    .catch((error) => {
+        console.error(error);
     });
     return key
 }
