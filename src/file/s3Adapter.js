@@ -2,9 +2,9 @@ const AWS = require('aws-sdk');
 const properties = require('../config/properties')
 
 AWS.config.update({
-    accessKeyId: properties.access,
-    secretAccessKey: properties.secret,
-    region: properties.region
+    accessKeyId: properties.awsAccess,
+    secretAccessKey: properties.awsSecret,
+    region: properties.awsRegion
 });
 var s3 = new AWS.S3();
 
