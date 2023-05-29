@@ -1,8 +1,14 @@
 const { client } = require('./mongoDB')
+const { createBinaryUUID } = require('binary-uuid')
 
 exports.create = async (year, grade, key, documents) => {
 
+    const id = createBinaryUUID().buffer
     var libraryDocument = {
+        _class: 'kr.hs.entrydsm.satellite.domain.library.persistence.LibraryDocumentEntity',
+        _id: id,
+        id: id,
+        createdAt: new Date(),
         year: year,
         grade: grade,
         filePath: key,
