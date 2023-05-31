@@ -3,7 +3,10 @@ const fs = require('fs');
 
 exports.generatePdf = async (html) => {
 
-    const browser = await puppeteer.launch({ headless: 'new' });
+    const browser = await puppeteer.launch({ 
+        executablePath: '/usr/bin/google-chrome',
+        headless: 'new'
+    });
     const page = await browser.newPage();
 
     await page.setContent(html, { waitUntil: 'networkidle2' });
