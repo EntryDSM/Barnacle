@@ -3,14 +3,19 @@ const fs = require('fs');
 
 exports.generatePdf = async (html) => {
 
+    console.log(html)
     const browser = await puppeteer.launch({ 
         executablePath: '/usr/bin/chromium-browser',
-        args: ['--no-sandbox', '--disable-dev-shm-usage'],
-        headless: 'new'
+        headless: 'new',
+        args: [
+          '--disable-dev-shm-usage',
+          '--no-sandbox',
+          '--disable-setuid-sandbox'
+        ]
     });
     const page = await browser.newPage();
 
-    await page.setContent(html, { waitUntil: 'networkidle2' });
+    await page.setContent(html, { waitUntil: 'networkidle0' });
     await page.emulateMediaType('screen');
 
     const buffer = await page.pdf({
