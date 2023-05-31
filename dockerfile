@@ -5,6 +5,6 @@ COPY . .
 
 RUN yarn
 
-EXPOSE 3030
+EXPOSE 8008
 
 CMD yarn start
