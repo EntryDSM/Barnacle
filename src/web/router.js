@@ -8,7 +8,7 @@ const express = require("express");
 
 var router = express.Router();
 
-router.post("/", async (req, res) => { 
+router.post("/library", async (req, res) => { 
 
   checkSecret(req, res)
   const year = req.query.year
