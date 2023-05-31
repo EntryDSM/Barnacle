@@ -4,7 +4,8 @@ const fs = require('fs');
 exports.generatePdf = async (html) => {
 
     const browser = await puppeteer.launch({ 
-        executablePath: '/usr/bin/google-chrome',
+        executablePath: '/usr/bin/chromium-browser',
+        args: ['--no-sandbox', '--disable-dev-shm-usage'],
         headless: 'new'
     });
     const page = await browser.newPage();
