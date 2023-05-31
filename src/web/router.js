@@ -15,6 +15,8 @@ router.post("/library", async (req, res) => {
   const grade = req.query.grade
 
   const documents = await document.getByGrade(grade)
+  console.log("create pdf file to " + year + ", " + grade + "'s documents")
+  console.log(documents)
 
   const pdf = await generatePdfByDocuments(documents)
 
