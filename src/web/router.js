@@ -11,6 +11,10 @@ var router = express.Router();
 router.post("/library", async (req, res) => { 
 
   checkSecret(req, res)
+  
+  if (!req.query['year'] || !req.query['grade']) {
+    res.status(400).send()
+  }
   const year = req.query.year
   const grade = req.query.grade
 
