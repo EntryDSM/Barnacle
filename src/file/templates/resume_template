@@ -12,9 +12,13 @@
                     <span class="text-body7">{{writer.department}}</span>
                     <span class="text-body7">{{writer.email}}</span>
                 </div>
+                {{#writer.url}}
+                    <div>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data={{{.}}}" height="80px" width="80px" alt=""/>
+                    </div>
+                {{/writer.url}}
             </div>
         </div>
-
         <div style="margin-top: 17px">
             <span class="text-body3">{{introduce.heading}}</span>
             <p class="text-body8 text-gray400 mt-2">{{introduce.introduce}}</p>
@@ -25,7 +29,7 @@
                 <div class="text-body5 mb-3">기술 스택</div>
                 <div class="flex gap-3" style="flex-flow : row wrap;">
                     {{#skillSet}}
-                    <div class="bg-gray50 rounded-md pl-2 pr-2 pt-0.5 pb-0.5 text-body7">{{.}}</div>
+                        <div class="bg-gray50 rounded-md pl-2 pr-2 pt-0.5 pb-0.5 text-body7">{{.}}</div>
                     {{/skillSet}}
                 </div>
             </div>
@@ -95,7 +99,9 @@
                     {{/skillSet}}
                 </div>
             </div>
-            <div>{{description}}</div>
+            <div>
+                <pre class="text-body7" style="font-family: Pretendard Variable, Pretendard;">{{description}}</pre>
+            </div>
             {{#url}}
             <a src="{{{.}}}" class="flex gap-2 bg-gray100 pl-3 pr-3 pt-2 pb-2 rounded-md fit text-body7"
                 style="margin-left: 0; margin-right: auto;">
