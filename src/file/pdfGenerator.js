@@ -5,7 +5,6 @@ exports.generatePdf = async (html) => {
 
     console.log(html)
     const browser = await puppeteer.launch({ 
-        executablePath: '/usr/bin/chromium-browser',
         headless: 'new',
         args: [
           '--disable-dev-shm-usage',

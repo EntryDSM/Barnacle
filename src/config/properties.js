@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
     dbUri: process.env.MONGO_DB_URI,
     awsRegion: process.env.AWS_REGION,
