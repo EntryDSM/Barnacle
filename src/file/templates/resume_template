@@ -82,7 +82,7 @@
         <div class="flex flex-col gap-10 rounded-md bg-gray50 pl-10 pr-10 pt-7 pb-7" style="height: 100%;">
             <div class="flex items-center">
                 <img width=60px height=60px class="mr-6 bg-gray300 rounded-md"
-                    src="https://s3.ap-northeast-2.amazonaws.com/file.dsm-repo.com/{{{representImagePath}}}"
+                    src="https://s3.ap-northeast-2.amazonaws.com/dsm-repo/{{{representImagePath}}}"
                     alt="projectImg" />
                 <div>
                     <div class="text-title1">{{name}}</div>
