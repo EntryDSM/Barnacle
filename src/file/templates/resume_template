@@ -20,10 +20,11 @@
             </div>
         </div>
         <div style="margin-top: 17px">
-            <span class="text-body3">{{introduce.heading}}</span>
-            <p class="text-body8 text-gray400 mt-2">{{introduce.introduce}}</p>
+            <pre class="text-body3"><div>{{introduce.heading}}</div></pre>
+            <pre class="text-body8 text-gray400 mt-2"><div>{{introduce.introduce}}</div></pre>
         </div>
 
+        {{#skillSet.length}}
         <div class="flex gap-3 flex-col" style="margin-top: 17px">
             <div>
                 <div class="text-body5 mb-3">기술 스택</div>
@@ -34,7 +35,9 @@
                 </div>
             </div>
         </div>
+        {{/skillSet.length}}
 
+        {{#awardList.length}}
         <div class="flex gap-3 flex-col" style="margin-top: 17px">
             <div>
                 <div class="text-body5 mb-3">수상 경력</div>
@@ -50,14 +53,16 @@
                             </div>
                         </div>
                         {{#description}}
-                            <div>{{.}}</div>
+                            <pre><div>{{.}}</div></pre>
                         {{/description}}
                     </div>
                 </div>
                 {{/awardList}}
             </div>
         </div>
+        {{/awardList.length}}
 
+        {{#certificateList.length}}
         <div class="flex gap-3 flex-col" style="margin-top: 17px">
             <div>
                 <div class="text-body5 mb-3">자격증</div>
@@ -75,13 +80,36 @@
                 {{/certificateList}}
             </div>
         </div>
+        {{/certificateList.length}}
+
+        {{#activityList.length}}
+        <div class="flex gap-3 flex-col" style="margin-top: 17px">
+            <div>
+                <div class="text-body5 mb-3">활동</div>
+                {{#activityList}}
+                <div class="bg-gray50 rounded-md pl-5 pt-3 pb-3 pr-5" style="margin-top: 10px;">
+                    <div class="flex justify-between">
+                        <span class="text-body5">{{name}}</span>
+                        <div class="text-gray400 flex text-body7 gap-2 items-center"">
+                            <hr class="bg-gray300 h-[12px] border-none [1px]" />
+                            <span class="text-body7">{{date}}{{#isPeriod}}{{endDate}}{{/isPeriod}}</span>
+                        </div>
+                        {{#description}}
+                            <pre><div>{{.}}</div></pre>
+                        {{/description}}
+                    </div>
+                </div>
+                {{/activityList}}
+            </div>
+        </div>
+        {{/activityList.length}}
     </page>
 
     {{#projectList}}
     <page>
         <div class="flex flex-col gap-10 rounded-md bg-gray50 pl-10 pr-10 pt-7 pb-7" style="height: 100%;">
             <div class="flex items-center">
-                <img width=60px height=60px class="mr-6 bg-gray300 rounded-md"
+                <img width=60px height=60px class="mr-6 rounded-md"
                     src="https://s3.ap-northeast-2.amazonaws.com/dsm-repo/{{{representImagePath}}}"
                     alt="projectImg" />
                 <div>

@@ -106,7 +106,7 @@
             white-space: pre-wrap;
         }
         page {
-            padding: 80px;
+            padding: 20px;
             background-color: #f6f6f6;
             height: 1122px;
         }

@@ -3,7 +3,6 @@ const fs = require('fs');
 
 exports.generatePdf = async (html) => {
 
-    console.log(html)
     const browser = await puppeteer.launch({ 
         headless: 'new',
         args: [

@@ -32,7 +32,7 @@ function calculateIndex(documents) {
                 studentNumber: it.writer.studentNumber,
                 page: page
             }
-            page += it.projectList.size + 1
+            page += it.projectList.length + 1
             return index
 		}
     )
