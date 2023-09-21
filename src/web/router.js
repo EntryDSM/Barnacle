@@ -5,6 +5,7 @@ const s3 = require('../file/s3Adapter')
 const document = require('../database/document')
 const libraryDocument = require('../database/libraryDocument')
 const express = require("express");
+const fs = require('fs');
 var router = express.Router();
 
 router.post("/library", async (req, res) => {
@@ -24,9 +25,21 @@ function getFilename(year, grade) {
 
 router.post("/library/preview", async (req, res) => {
     const {year, grade, documents, pdf} = await checkParamAndGetPdf(req, res);
+    /*
     res.setHeader('Content-Type', 'application/pdf');
     res.send(pdf)
+    */
+    fs.writeFile("file.pdf", pdf, (err) => {
+      if (err) {
+        console.error('Error writing file:', err);
+      } else {
+        console.log('Buffer written to file successfully.');
+        res.send()
+      }
+    });
+    res.send()
 });
+
 
 async function checkParamAndGetPdf(req, res) {
     checkSecret(req, res)

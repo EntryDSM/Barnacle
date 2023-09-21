@@ -22,20 +22,48 @@ exports.processTemplateByDocuments = async (documents) => {
 function documentFormat(document) {
 
 	document.projectList.map((project) => {
-		project.startDate = new Intl.DateTimeFormat("ko-KR").format(project.startDate)
-		project.endDate = new Intl.DateTimeFormat("ko-KR").format(project.endDate)
+		project.startDate = formatDate(project.startDate)
+		if (project.isPeriod == true) {
+		    project.endDate = formatDate(project.endDate)
+		} else {
+			project.endDate = "진행중"
+		}
+		if (project.type == "PERSONAL") {
+			project.type = "개인프로젝트"
+		} else {
+			project.type = "팀프로젝트"
+		}
 	})
 
 	document.awardList.map((award) => {
-		award.date = new Intl.DateTimeFormat("ko-KR").format(award.date)
+		award.date = formatDate(award.date)
 	})
 
 	document.certificateList.map((certificate) => {
-		certificate.date = new Intl.DateTimeFormat("ko-KR").format(certificate.date)
+		certificate.date = formatDate(certificate.date)
+	})
+
+	document.activityList.map((activity) => {
+		activity.date = formatDate(activity.date)
+		activity.endDate = formatDate(activity.endDate)
 	})
 
 	document.writer.studentNumber =
 		String(document.writer.grade) +
 		String(document.writer.classNum) +
 		String((document.writer.number > 9) ? document.writer.number : '0' + document.writer.number)
+}
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('. ');
 }

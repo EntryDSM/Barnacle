@@ -25,9 +25,9 @@ exports.getByGradeAndYear = async (grade, year) => {
 				if(writerA.classNum < writerB.classNum) return -1;
 			})
 			.sort(function(a, b)  {
-				if(a.number > b.classNum) return 1;
-				if(a.classNum === b.classNum) return 0;
-				if(a.classNum < b.classNum) return -1;
+				if(a.number > b.number) return 1;
+				if(a.number === b.number) return 0;
+				if(a.number < b.number) return -1;
 			})
 		)
 }
