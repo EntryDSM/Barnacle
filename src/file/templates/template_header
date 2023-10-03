@@ -156,22 +156,23 @@
         }
 
         .text-body5 {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 500;
         }
 
         .text-body6 {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 400;
         }
 
         .text-body7 {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
+            line-height: 24px
         }
 
         .text-body8 {
-            font-size: 14px;
+            font-size: 17px;
             font-weight: 400;
         }
 

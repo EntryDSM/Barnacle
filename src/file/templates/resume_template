@@ -1,6 +1,6 @@
 <div class="m-auto flex flex-col">
     <page>
-        <div className="h-[1164px] flex flex-col ml-6 mr-6 gap-[20px]">
+        <div className="h-[1164px] flex flex-col ml-6 mr-6 gap-[15px]">
         <div class="flex justify-between">
             <div>
                 <span class="text-title1">{{writer.name}}</span>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     {{#description}}
-                    <pre><div>{{.}}</div></pre>
+                    <pre><div class="text-body7">{{.}}</div></pre>
                     {{/description}}
                 </div>
                 {{/activityList}}
@@ -110,7 +110,7 @@
     {{#projectList}}
     <page>
         <div className="h-[1244px]">
-        <div class="flex flex-col gap-5 rounded-md bg-gray50 pl-10 pr-10 pt-7 pb-7">
+        <div class="flex flex-col gap-5 rounded-md bg-gray50 pl-7 pr-7 pt-7 pb-7">
             <div class="flex items-center">
                 <img width=60px height=60px class="mr-6 rounded-md"
                     src="https://s3.ap-northeast-2.amazonaws.com/dsm-repo/{{{representImagePath}}}"
@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div>
-                <pre class="text-body7 whitespace-pre-wrap truncate overflow-hidden line-clamp-[38]" style="font-family: Pretendard Variable, Pretendard;">{{description}}</pre>
+                <pre class="text-body7" style="font-family: Pretendard Variable, Pretendard;">{{description}}</pre>
             </div>
             <div class="flex flex-wrap gap-2">
             {{#urls}}
