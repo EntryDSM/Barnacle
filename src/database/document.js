@@ -17,17 +17,5 @@ exports.getByGradeAndYear = async (grade, year) => {
 				else if ( writer.classNum == '4' ) it.writer.department = '정보보안과'
 				return it
 			})
-			.sort(function(a, b)  {
-				writerA = a.writer
-				writerB = b.writer
-				if(writerA.classNum > writerB.classNum) return 1;
-				if(writerA.classNum === writerB.classNum) return 0;
-				if(writerA.classNum < writerB.classNum) return -1;
-			})
-			.sort(function(a, b)  {
-				if(a.number > b.number) return 1;
-				if(a.number === b.number) return 0;
-				if(a.number < b.number) return -1;
-			})
 		)
 }
